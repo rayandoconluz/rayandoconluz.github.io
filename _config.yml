@@ -45,9 +45,6 @@ include:
   - node_modules/workbox-sw/build/importScripts/workbox-sw.prod.v1.3.0.js
 
 collections:
-  rutas:
-    output: true
-    permalink: /colombia/:name
   productos:
     output: true
     foo: bar

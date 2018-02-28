@@ -4,7 +4,7 @@ title:  Casa de los colibríes
 categories: colombia 
 tags: quindío
 excerpt: El recorrido es en total de 12.39 kilometros, llegando a la casa de los colibríes y bajando por el mirador las palmas.
-images_url: /images/acaime
+images_url: /images/inicio
 author: manuel
 ---
 
