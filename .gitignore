@@ -1,0 +1,11 @@
+_site/
+chatbot
+javascript
+.sass-cache/
+.jekyll-metadata
+.DS_Store
+node_modules
+.DS_Store
+err.log
+out.log
+npm-debug.log
