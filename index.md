@@ -4,4 +4,4 @@ menu: true
 title: rayando con luz
 ---
 
-rutas de los andes
+rayando con luz consejos sobre fotografia
