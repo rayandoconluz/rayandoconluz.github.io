@@ -1,0 +1,29 @@
+{% if include.type == 'search' %}
+  {% capture map_url %}
+    https://www.google.com/maps/embed/v1/place?key={{site.googlemaps_key}}&q={{include.querie}}&maptype=satellite&zoom={{include.zoom | default: "9"}}
+  {% endcapture %}
+{% elsif include.type == 'youtube' %}
+  {% capture map_url %}
+    https://www.google.com/maps/embed/v1/directions?key={{site.googlemaps_key}}&origin={{include.origin}}&destination={{include.destination}}&mode={{include.mode | default: "driving"}}&maptype=satellite&zoom={{include.zoom | default: "12"}}
+  {% endcapture %}
+{% else %}
+   {% capture map_url %}
+    https://www.google.com/maps/d/embed?mid={{include.mid}}
+  {% endcapture %}
+{% endif %}
+
+<figure class="op-interactive">
+  <amp-iframe 
+    width="{{ include.width | default: 200 }}"
+    height="{{ include.height | default: 200 }}" 
+    sandbox="allow-scripts allow-same-origin allow-popups"
+    frameborder="0" 
+    scrolling="no"
+    frameborder="0" 
+    class="no-margin"
+    layout="responsive"
+    frameborder="0"
+    src="{{ map_url }}">
+  </amp-iframe>
+  <figcaption>{{ include.caption }}</figcaption>
+</figure>

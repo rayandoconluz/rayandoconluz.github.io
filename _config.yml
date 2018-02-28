@@ -1,0 +1,56 @@
+title: Senderos y rutas escritas por locales de los Andes colombianos
+logo: /images/logo.png
+#PWA parameters
+pwa: rutas de los andes
+short_name: rutas
+brand_color: white
+main_content: colombia
+icons: 
+  - src: images/launcher-icon-1x.png
+    size: 48x48
+  - src: images/launcher-icon-2x.png
+    size: 96x96
+  - src: images/launcher-icon-4x.png
+    size: 192x192
+#SEO parameters
+description: Descubre hermosas y poco conocidas rutas de los Andes colombianos, evade mutitudes en el camino y observa las más bellas especies y paisajes en tus rutas de senderismo. Una experiencia única y maravillosa te espera!
+lang: es
+fb_app_id: 1880022215651426
+url: https://rutasdelosandes.com # the base hostname & protocol for your site, e.g. http://example.com
+alternative_lang: en
+alternative_url: http://hikingintheandes.com # alternative version
+email: rutasdelosandes@gmail.com
+fbpage: https://www.facebook.com/rutasdelosandes0/
+googlemaps_key: AIzaSyAz1r9qDIaA7lGoMdW7VPpvic7JXZjCdls
+google_analytics: UA-100391485-2
+instant_pages: 1078600055607267
+permalink: /:categories/:title
+# Social
+twitter: RutasAndes
+# Build settings
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jemoji
+  - jekyll-seo-tag
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - chatbot
+  - server.js
+include:
+  - node_modules/workbox-sw/build/importScripts/workbox-sw.prod.v1.3.0.js
+
+collections:
+  rutas:
+    output: true
+    permalink: /colombia/:name
+  productos:
+    output: true
+    foo: bar
+    permalink: /:collection/:name
+
+

@@ -1,0 +1,184 @@
+---
+layout: null
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <link>{{ site.url }}</link>
+    <description>
+      {% if site.description %}{{ site.description | xml_escape }}{% endif %}
+    </description>
+    <lastBuildDate>2014-12-11T04:44:16Z</lastBuildDate>
+    <link>{{ site.url }}{{ site.baseurl }}/</link>
+    <language>es-co</language>
+    {% for post in site.posts %}
+        {%  unless post.draft %}
+            <item>
+                <title>{{ post.title | xml_escape }}</title>
+                <link>{{ site.url }}{{ post.url }}</link>
+                 <guid isPermaLink="false">{{ post.url }}</guid>
+                <description>
+                    {% if post.excerpt %}
+                    {{ post.excerpt | xml_escape }}
+                    {% endif %}
+                </description>
+                <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+                {% assign authorInfo = site.data.authors[post.author] %}  
+                <author>{{ authorInfo.name }}</author>
+                <content:encoded>
+                    <![CDATA[
+                        <!doctype html>
+                        <html lang="en" prefix="op: http://media.facebook.com/op#">
+                        <head>
+                            <meta charset="utf-8">
+                            <link rel="canonical" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
+                            <meta property="op:markup_version" content="v1.0">
+                        </head>
+                        <body>
+                            <article>
+                            <header>
+                                <h1>{{ post.title | xml_escape }}</h1>
+                                {% if post.images_url %}
+                                    <figure>
+                                        <img src="{{ post.images_url |  prepend: site.url }}/featured.jpg" alt=" {{ post.title }} ">
+                                        <figcaption>{{ post.title }}</figcaption>
+                                    </figure>                          
+                                {% endif %}
+                                <address>
+                                    <a rel="facebook" href="{{ authorInfo.facebook }}">{{ authorInfo.name }}</a>
+                                    {{ authorInfo.description }}
+                                </address>
+                                <time class="op-published" dateTime="{{ post.date | date: "%Y-%m-%dT%H:%M:%S" }}">{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</time>
+                                <time class="op-modified" dateTime="{{  "now"  | date: "%Y-%m-%dT%H:%M:%S" }}">{{  "now"  | date: "%a, %d %b %Y %H:%M:%S %z" }}</time>
+                                <figure class="op-ad">
+                                    <iframe width="300" height="250" style="border:0; margin:0;" src="https://www.facebook.com/adnw_request?placement=1880022215651426_1923782091275438&adtype=banner300x250"></iframe>
+                                </figure>
+                            </header>
+                                {% assign  fbvideos = site.url | prepend: '4" src="' %}
+                                {{ post.content |
+                                    replace: "<amp-img", "<img" | 
+                                    replace: "</amp-img>", "</img>" |
+                                    replace: "</img>", "" |
+                                    replace: "amp-youtube", "iframe" |
+                                    replace: 'data-videoid="', 'src="https://www.youtube.com/embed/' |
+                                    replace: "amp-iframe", "iframe" |
+                                    replace: "<amp-carousel", "<figure class='op-slideshow'" |
+                                    replace: "/amp-carousel", "/figure" |
+                                    replace: "<amp-video", "<video" |
+                                    replace: '4" src="', fbvideos |
+                                    replace: "</amp-video>", "</video>"
+                                }}  
+                                <figure class="op-tracker op-interactive">
+                                    <iframe>
+                                        <script>
+                                            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                            ga('create','{{ site.google_analytics }}', {'alwaysSendReferrer': true});
+                                            ga('set', 'dataSource', 'iafacebook');
+                                            ga('set', 'referrer', 'http://m.facebook.com/');
+                                            ga('send', 'pageview');
+                                        </script>
+                                        <style>
+                                            .alert-title{
+                                                font-size: 25px;
+                                            }
+                                            .alert-info{
+                                                color: #31708f;
+                                                background-color: #d9edf7;
+                                                border-color: #bce8f1;
+                                                padding: 7px 9px;
+                                                border: 1px solid transparent;
+                                                border-radius: 4px;
+                                                font-size:17px;
+                                                font-family: sans-serif;
+                                                font-weight: 300;
+                                            } 
+                                            .alert-info a{
+                                                color: #000015;
+                                                font-weight: 300;
+                                            }    
+                                            @media (min-width: 600px) {
+                                                .alert-info {
+                                                    padding: 10px;
+                                                    margin-bottom: 20px;
+                                                    font-size: 18px;
+                                                }
+                                            }
+                                             body{
+                                                margin: 0;
+                                            }
+                                            .warning {
+                                                padding: 7px 9px;
+                                                background-color: #fcf8e3;
+                                                border-color: #faebcc;
+                                                color: #8a6d3b;
+                                                font-size: 17px;
+                                                font-family: sans-serif;
+                                                font-size:17px;
+                                                margin: 10px 0;
+                                            }
+                                        </style>
+                                        {% include route.html images_url = post.images_url viewranger = post.viewranger %}
+                                        <script>
+                                            var android =  document.getElementById("android")
+                                            var ios = document.getElementById("ios")
+                                            var viewranger = document.getElementById("viewranger")
+                                            var gpx = document.getElementById("gpx")
+                                            ios.onclick = function(){
+                                                ga('send', 'event', 'Rutas', 'descargaAppIos')
+                                            }
+                                            android.onclick = function(){
+                                                ga('send', 'event', 'Rutas', 'descargaAppAndroid')
+                                            }
+                                            viewranger.onclick = function(){
+                                                ga('send', 'event', 'Rutas', 'clickRutaOnline')
+                                            }
+                                            gpx.onclick= function(){
+                                                ga('send', 'event', 'Rutas', 'descargaRutaGpx')
+                                            }
+                                        </script>
+                                    </iframe>
+                                </figure>
+                                <footer>
+                                   <ul class="op-related-articles">
+                                    {% assign maxRelated = 4 %}
+                                    {% assign minCommonTags =  1 %}
+                                    {% assign maxRelatedCounter = 0 %}
+                                        
+                                    {% for relatedPost in site.posts %}
+                                     {% unless relatedPost.draft or relatedPost.layout == 'post' %}                                      
+                                        {% assign sameTagCount = 0 %}
+                                        {% assign commonTags = '' %}
+                                        {% for tag in relatedPost.tags %}
+                                            {% if relatedPost.url != post.url %}
+                                                    {% assign sameTagCount = sameTagCount | plus: 1 %}
+                                            {% endif %}
+                                        {% endfor %}
+                                        {% if sameTagCount >= minCommonTags %}
+                                            <li>
+                                                <a href="{{ site.url }}{{ relatedPost.url }}">{{ relatedPost.title }}</a>
+                                            </li>
+                                            {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+                                            {% if maxRelatedCounter >= maxRelated %}
+                                                {% break %}
+                                            {% endif %}
+                                        {% endif %}
+                                     {% endunless %}
+                                    {% endfor %}
+                                    </ul>
+                                </footer>
+                            </article>
+                        </body>
+                    </html>
+                    ]]>
+                </content:encoded>
+            </item>
+        {% endunless %}
+    {% endfor %}
+  </channel>
+</rss>

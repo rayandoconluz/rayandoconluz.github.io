@@ -1,0 +1,51 @@
+<amp-analytics type="googleanalytics" id="analytics1">
+<script type="application/json">
+{
+  "vars": {
+    "account": "{{ site.google_analytics }}"
+  },
+  "triggers": {
+      "trackPageview": {
+        "on": "visible",
+        "request": "pageview"
+      },
+      "trackClickGpx" : {
+        "on": "click",
+        "selector": "#gpx",
+        "request": "event",
+        "vars": {
+          "eventCategory": "Rutas",
+          "eventAction": "descargaRutaGpx"
+        }
+      },
+      "trackClickOnAndroid" : {
+        "on": "click",
+        "selector": "#android",
+        "request": "event",
+        "vars": {
+          "eventCategory": "Rutas",
+          "eventAction": "descargaAppAndroid"
+        }
+      },
+      "trackClickOnIos" : {
+        "on": "click",
+        "selector": "#ios",
+        "request": "event",
+        "vars": {
+          "eventCategory": "Rutas",
+          "eventAction": "descargaAppIos"
+      }
+      },
+      "trackClickOnViewRanger" : {
+        "on": "click",
+        "selector": "#viewranger",
+        "request": "event",
+        "vars": {
+          "eventCategory": "Rutas",
+          "eventAction": "clickRutaOnline"
+      }
+    }
+  }
+}
+</script>
+</amp-analytics>

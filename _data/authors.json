@@ -1,0 +1,36 @@
+{
+    "gabo": {
+        "name": "Juan Gabriel Ramirez",
+        "twitter": "_jgrc_",
+        "facebook": "https://www.facebook.com/jgramirezc",
+        "email":"",
+        "color": "blue",
+        "facebookId":"601094299",
+        "description": "Un montañero mas"    
+    },
+    "manuel": {
+        "name": "Alejandro Ramirez",
+        "twitter": "nz3_manu",
+        "facebook": "https://www.facebook.com/Manuel-Ramirez-1955523454660905/",
+        "email":"nz3.manu@gmail.com",
+        "color": "green",
+        "facebookId":"1955523454660905",
+        "description": "🏔🚶🏼🏕"
+    },
+    "leidy": {
+        "name": "Leidy Holguin",
+        "facebook": "https://www.facebook.com/leidyjhojanah",
+        "email":    "leidyholguin@outlook.es",
+        "color": "purple",
+        "facebookId":"1392349473",
+        "description": "🏞 🍃 ⛺️"
+    }, 
+    "daniel":{
+        "name": "Daniel López ",
+        "facebook": "https://www.facebook.com/ellions",
+        "email": "danielopezq@gmail.com",
+        "color": "red",
+        "facebookId":"1518774070",
+         "description": "Soy licenciado en Comunicación e informática Educativa de la Universidad Tecnológica de Pereira, de allí mi pasión al cine, me gusta escribir acerca de diversos temas como: Viajes, Política, Cultura, Tecnología, Educación y obviamente Cine"
+    }
+}

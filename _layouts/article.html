@@ -1,0 +1,59 @@
+---
+layout: basic
+---
+<div class="post_featured-image">
+        <h1 class="post-title">{{ page.title | escape }}</h1>
+        <div class="scrim-bottom"></div>
+</div>
+<div class="wrapper">
+<article class="post">
+  <header class="post-header">
+  </header>
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+</article>
+</div>
+<h2 class="related-title">Quizas tambien te Interesé alguna de nuestros posts 🤔 </h2>
+<ul class="related-articles">
+        {% assign maxRelated = 4 %}
+        {% assign minCommonTags =  1 %}
+        {% assign maxRelatedCounter = 0 %}
+        {% for relatedPost in site.posts %}
+          {% unless relatedPost.draft or relatedPost.layout == 'post' %}                                       
+            {% assign sameTagCount = 0 %}
+            {% assign commonTags = '' %}
+      
+            {% for tag in relatedPost.tags %}
+                {% if relatedPost.url != page.url %}
+                    {% assign sameTagCount = sameTagCount | plus: 1 %}
+                {% endif %}
+            {% endfor %}
+      
+            {% if sameTagCount >= minCommonTags %}
+                <li>
+                    <a class="related-articles__link" href="{{ site.url }}{{ relatedPost.url }}">
+                        <div class="scrim-top">
+                        </div>
+                        <div class="scrim-bottom">
+                        </div>
+                        <h3 class="related-articles__title">{{ relatedPost.title }}</h3>
+                        <h4 class="related-articles__author">Por {{ site.data.authors[relatedPost.author].name}}, Jun 28</h4>
+                        <amp-img 
+                        layout="responsive" 
+                        width="1080"
+                        height="610"
+                        src="{{relatedPost.images_url}}/featured.jpg"> 
+                    </a>
+                </li>
+                {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+                {% if maxRelatedCounter >= maxRelated %}
+                    {% break %}
+                {% endif %}
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+</ul>
+      
+
+

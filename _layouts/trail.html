@@ -1,0 +1,146 @@
+---
+layout: default
+---
+<div class="trail_featured-image">
+        <h1 class="post-title">{{ page.title | escape }}</h1>
+        <div class="scrim-bottom"></div>
+</div>
+<div class="wrapper">
+<article class="post">
+  <header class="post-header">
+        <div class="post-meta">
+          {% if page.author %}
+          {% assign authorInfo = site.data.authors[page.author] %}  
+          <div class="author_avatar">
+            <div>
+              <amp-img class="author_avatar-img"
+                    src="https://graph.facebook.com/{{ authorInfo.facebookId }}/picture?type=normal"
+                    alt=""
+                    width=70px
+                    height=70px
+                    >
+            </div>
+            <div class="author_avatar-svg {{authorInfo.color}}">
+              <svg viewBox="0 0 114 114" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.66922967,32.092726 C17.0070768,13.6353618 35.9421928,1.75 57,1.75 C78.0578072,1.75 96.9929232,13.6353618 106.33077,32.092726 L107.66923,31.4155801 C98.0784505,12.4582656 78.6289015,0.25 57,0.25 C35.3710985,0.25 15.9215495,12.4582656 6.33077033,31.4155801 L7.66922967,32.092726 Z">
+                </path>
+                <path d="M106.33077,81.661427 C96.9929232,100.118791 78.0578072,112.004153 57,112.004153 C35.9421928,112.004153 17.0070768,100.118791 7.66922967,81.661427 L6.33077033,82.338573 C15.9215495,101.295887 35.3710985,113.504153 57,113.504153 C78.6289015,113.504153 98.0784505,101.295887 107.66923,82.338573 L106.33077,81.661427 Z">
+                </path>
+              </svg>
+            </div>
+        </div>
+          <div class="author_body">
+              <div class="author_name">{{ authorInfo.name }}</div>
+               {% if authorInfo.facebook %}
+                <a href="{{ authorInfo.facebook }}" target="_blank" class="author_facebook">
+                  <amp-img
+                    src="/images/facebook-logo-button.png"
+                    width=24px
+                    height=24px
+                  >
+                </a>
+              {% endif %}
+               {% if authorInfo.email %}
+                <a href="mailto:{{ authorInfo.email }}?Subject=acerca de tu articulo:{{ page.title | escape }}" class="author_email">
+                  <amp-img
+                    src="/images/close-envelope.png"
+                    width=24px
+                    height=24px
+                  >
+                </a>
+              {% endif %}
+              {% if authorInfo.twitter %}
+                <a href="https://twitter.com/{{ authorInfo.twitter }}" target="_blank" class="author_twitter">
+                  <amp-img
+                      src="/images/twitter-logo-button.png"
+                      width=24px
+                      height=24px
+                    >
+                </a>
+              {% endif %}
+              <div class="author_description">{{ authorInfo.description }}</div>
+              {% endif %}
+              {% comment %}  
+                <time class="author_published-date" datetime="{{ page.date | date_to_xmlschema }}">
+                  {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+                  {{ page.date | date: date_format }}
+                </time>
+              {% endcomment %}
+            </div>
+          </div>
+    </header>
+  <div class="post-content" itemprop="articleBody">
+    <ul class="tags">
+      {% for tag in page.tags %}
+        <li><a href="/tags#{{ tag }}" class="tag">{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
+    <amp-social-share type="system" data-mode="replace"></amp-social-share>
+    <amp-social-share type="twitter"></amp-social-share>
+    <amp-social-share type="whatsapp"></amp-social-share>
+    <amp-social-share type="facebook" data-param-app_id="1880022215651426"></amp-social-share>
+    {{ content }}
+    {% include footer.html %}
+  </div>
+</article>
+</div>
+
+<div class="warning">
+  <i class="fa fa-exclamation-circle fa-2" aria-hidden="true"></i>
+  <b>
+    ⚠️ &nbsp; <i>Sigue atento estas recomendaciones al iniciar la ruta: </i>
+  </b>
+  <ul>
+    <li>🏔🧔 Ir siempre con un guía.</li>
+    <li>🏔🎿 lleva siempre el equipo de montaña adecuado.</li>
+    <li>🚯 No dejar basuras en los senderos.</li>
+    <li>🚫🔥 Minimiza el impacto de tus fogatas.</li>
+    <li>🚫🔫🦌 Respeta la vida silvestre.</li>
+    <li>🚫🏕 No acampar en lugares no permitidos.</li>
+  </ul>
+</div>
+
+{% assign viewranger= page.viewranger %}
+{% include route.html  images_url = page.images_url viewranger = page.viewranger %}
+<h2 class="related-title">Quizas tambien te Interesé alguna de estas rutas  🤔 </h2>
+<ul class="related-articles">
+  {% assign maxRelated = 4 %}
+  {% assign minCommonTags =  1 %}
+  {% assign maxRelatedCounter = 0 %}
+  {% for relatedPost in site.posts %}
+    {% unless relatedPost.draft or relatedPost.layout == 'post' %}                                       
+      {% assign sameTagCount = 0 %}
+      {% assign commonTags = '' %}
+
+      {% for tag in relatedPost.tags %}
+          {% if relatedPost.url != page.url %}
+              {% assign sameTagCount = sameTagCount | plus: 1 %}
+          {% endif %}
+      {% endfor %}
+
+      {% if sameTagCount >= minCommonTags %}
+          <li>
+              <a class="related-articles__link" href="{{ site.url }}{{ relatedPost.url }}">
+                  <div class="scrim-top">
+                  </div>
+                  <div class="scrim-bottom">
+                  </div>
+                  <h3 class="related-articles__title">{{ relatedPost.title }}</h3>
+                  <h4 class="related-articles__author">Por {{ site.data.authors[relatedPost.author].name}}, Jun 28</h4>
+                  <amp-img 
+                  layout="responsive" 
+                  width="1080"
+                  height="610"
+                  src="{{relatedPost.images_url}}/featured.jpg"> 
+              </a>
+          </li>
+          {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+          {% if maxRelatedCounter >= maxRelated %}
+              {% break %}
+          {% endif %}
+      {% endif %}
+    {% endunless %}
+  {% endfor %}
+</ul>
+
+

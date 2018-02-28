@@ -1,0 +1,25 @@
+---
+layout: null
+---
+
+{
+  "short_name": "{{site.short_name}}",
+  "name": "{{site.pwa}}",
+  "display": "fullscreen",
+  "background_color": "white",
+  "gcm_sender_id": "103953800507",
+  "orientation": "any",
+  "icons": [
+    {% for icon in site.icons %}
+      {
+       "src": "{{icon.src}}",
+       "type": "image/png",
+       "sizes": "{{icon.size}}"
+      }
+      {% if forloop.last == false %}
+        ,
+      {% endif %}
+    {% endfor %}
+  ],
+  "start_url": ".?launcher=true"
+}

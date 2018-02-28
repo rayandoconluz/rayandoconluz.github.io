@@ -1,0 +1,96 @@
+{
+    "code": "SUCCESS",
+    "error": null,
+    "banks": [
+       {
+          "id": "991bfda3-89ff-4e5a-b5ba-47509cbf2b5a",
+          "description": "BANCO AV VILLAS",
+          "pseCode": "1052"
+       },
+       {
+          "id": "180efbd3-545e-429d-b41f-e0c149020000",
+          "description": "BANCO CAJA SOCIAL",
+          "pseCode": "1032"
+       },
+       {
+          "id": "0cebcab6-f0e1-4eb0-83cb-9d7948fbfcc6",
+          "description": "BANCO COLPATRIA",
+          "pseCode": "1019"
+       },
+       {
+          "id": "954285ec-d446-4aa6-9eae-0442dbac3ea2",
+          "description": "BANCO CORPBANCA S.A",
+          "pseCode": "1006"
+       },
+       {
+          "id": "89672712-c2f8-4cdc-b131-bb424c7ebd5c",
+          "description": "BANCO DAVIVIENDA",
+          "pseCode": "1051"
+       },
+       {
+          "id": "d8535d19-cab1-477e-b545-38464fb30a69",
+          "description": "BANCO DE BOGOTA",
+          "pseCode": "1001"
+       },
+       {
+          "id": "f84b16d6-a4ca-43c3-83c2-803c81e24e88",
+          "description": "BANCO DE OCCIDENTE",
+          "pseCode": "1023"
+       },
+       {
+          "id": "e3aefbe9-bfca-476d-bbb7-f2f0d63adb7d",
+          "description": "BANCO FALABELLA ",
+          "pseCode": "1062"
+       },
+       {
+          "id": "a2674f77-d994-4dea-b703-01a50eacba64",
+          "description": "BANCO GNB SUDAMERIS",
+          "pseCode": "1012"
+       },
+       {
+          "id": "b09bfd44-3a98-4383-a7d7-d02a6d35e8c7",
+          "description": "BANCO PICHINCHA S.A.",
+          "pseCode": "1060"
+       },
+       {
+          "id": "db7ff29f-bbd2-48b2-94be-b29406e9fa03",
+          "description": "BANCO POPULAR",
+          "pseCode": "1002"
+       },
+       {
+          "id": "94a48ae1-f0ea-45ff-acb1-efd3c6dcfa7e",
+          "description": "BANCO PROCREDIT",
+          "pseCode": "1058"
+       },
+       {
+          "id": "94cfedbe-da12-4825-b1e0-bec4066f6bf0",
+          "description": "BANCOLOMBIA",
+          "pseCode": "1007"
+       },
+       {
+          "id": "6d416b46-a165-4cef-9407-3867470e74c9",
+          "description": "BANCOOMEVA S.A.",
+          "pseCode": "1061"
+       },
+       {
+          "id": "d33c1769-1e32-456e-a866-8406e2652204",
+          "description": "BBVA COLOMBIA S.A.",
+          "pseCode": "1013"
+       },
+       {
+          "id": "62a4293f-98f0-420e-94d6-6ce34e176f74",
+          "description": "CITIBANK ",
+          "pseCode": "1009"
+       },
+       {
+          "id": "700cd577-1f8e-4c85-bd45-4d43604c805f",
+          "description": "HELM BANK S.A.",
+          "pseCode": "1014"
+       },
+       {
+          "id": "4ba59c1c-929b-4d97-b4cc-0416f92715c6",
+          "description": "HSBC COLOMBIA ",
+          "pseCode": "1010"
+       }
+    ]
+ }

@@ -6,6 +6,8 @@ javascript
 .DS_Store
 node_modules
 .DS_Store
+.jekyll-cache/
 err.log
 out.log
+.cmsrc
 npm-debug.log

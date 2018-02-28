@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html  amp lang="{{ page.lang | default: site.lang | default: "es" }}" prefix="op: http://media.facebook.com/op#">
+
+  {% include head.html %}
+
+  <body>
+    {% if site.google_analytics %}
+    {% include google-analytics.html %}
+    {% endif %}
+    {% include header.html %}
+    <main class="page-content" aria-label="Content">
+        {{ content }}
+    </main>
+  <amp-install-serviceworker src="/service-worker.js" layout="nodisplay"></amp-install-serviceworker>
+  </body>
+
+</html>
