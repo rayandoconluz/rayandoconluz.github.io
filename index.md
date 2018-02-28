@@ -1,7 +1,7 @@
 ---
 layout: home
 menu: true
-title: Acerca de nosotros
+title: rayando con luz
 ---
 
 rutas de los andes
