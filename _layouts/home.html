@@ -23,7 +23,7 @@ layout: default
           <div class="article" style="background-image:url({{post.images_url}}/thumbnail.jpg);">
             <div class="scrim-top"></div>
             <div class="scrim-bottom"></div>
-            <h3>{{ post.title | escape }}</h3>  
+            <div class="post-title">{{ post.title | escape }}</div>  
             {% if post.author %}
               {% assign authorInfo = site.data.authors[post.author] %}  
               {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
