@@ -3,38 +3,34 @@ layout: default
 ---
 <div class="wrapper">
 <div class="home">
+  <div class="categories">
+    <ul>
+      <a href="#">
+        <li>
+          <span class="active" >Articulos</span>
+        </li>
+      </a>
+    </ul>
+  </div>
   <h1 class="page-heading">{{page.title}}</h1>
   {{ content }}
-  <ul class="post-list">
+  <div class="articles">
     {% for post in site.posts %}
       {% unless post.draft %}
-      <li>
-        <a class="post-home_link" href="{{ post.url | relative_url }}">
-          <h2>{{ post.title | escape }}</h2>
-          <div class="post-home_description">
-            <span class="post-home_thumbnail">
-               <amp-img src="{{post.images_url}}/thumbnail.jpg" 
-                        layout="responsive"
-                        alt="{{post.thumbnail_alt}}" 
-                        height="370" 
-                        width="700"/>
-                        <div fallback>revisa tu conexión a internet</div>
-               </amp-img>
-            </span>
-            <span class="post-home_excerpt">{{ post.excerpt }}</span>
+        <a class="article-link" href="{{ post.url | relative_url }}">
+          <div class="article" style="background-image:url({{post.images_url}}/thumbnail.jpg);">
+            <div class="scrim-top"></div>
+            <div class="scrim-bottom"></div>
+            <h3>{{ post.title | escape }}</h3>  
+            {% if post.author %}
+              {% assign authorInfo = site.data.authors[post.author] %}  
+              {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+               <h4>{{ authorInfo.name }}, {{post.date | date: date_format}} </h4>
+            {% endif %}    
           </div>
-        </a>
-        <ul class="tags">
-        {% for tag in post.tags %}
-          <li><a href="/regiones#{{ tag }}" class="tag">{{ tag }}</a></li>
-        {% endfor %}
-        </ul>
-      </li>
+        </a>     
       {% endunless %}
     {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">Subscribete !! <a href="{{ "/feed.xml" | relative_url }}">a nuestro RSS</a></p>
-
+    </div>
 </div>
 </div>
