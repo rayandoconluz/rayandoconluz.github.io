@@ -1,9 +1,9 @@
 ---
 layout: page
 menu: true
-title: Regiones
-permalink: /regiones/
-images_url: /images/regiones
+title: categorias
+permalink: /categorias/
+images_url: /images/categorias
 ---
 <!-- Get the tag name for every tag on the site and set them
 to the `site_tags` variable. -->
