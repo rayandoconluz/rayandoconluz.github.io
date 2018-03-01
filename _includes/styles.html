@@ -50,6 +50,14 @@
       font-family: "kust";
       src: url("/fonts/kust/kust.ttf");
     }
+    @font-face {
+      font-family: "roboto regular";
+      src: url("/fonts/roboto/Roboto-Regular.ttf");
+    }
+    @font-face {
+      font-family: "beacon";
+      src: url("/fonts/beacon/beacon.ttf");
+    }
     div.header-wrapper{
       padding-top:0;
       margin:0 auto;
@@ -293,7 +301,7 @@
     }
     .author_name {
       color: black;
-      font-family: fantasy;
+      font-family: 'beacon';
       font-size: 17px;
     }
     .author_description {
@@ -900,6 +908,9 @@ a:hover {
   justify-content: space-around;
   padding: 0;
   background-color: white;
+}
+.page-content{
+  font-family: 'roboto regular', serif;
 }
 @media (min-width: 992px) { 
   .articles, .related-articles {
