@@ -4,7 +4,7 @@ logo: /images/logo.png
 pwa: rutas de los andes
 short_name: rutas
 brand_color: white
-main_content: colombia
+main_content: posts
 icons: 
   - src: images/launcher-icon-1x.png
     size: 48x48
@@ -45,9 +45,13 @@ include:
   - node_modules/workbox-sw/build/importScripts/workbox-sw.prod.v1.3.0.js
 
 collections:
-  productos:
+  camisetas:
     output: true
-    foo: bar
+    layout: product
+    permalink: /:collection/:name
+  gorras:
+    output: true
+    layout: product
     permalink: /:collection/:name
 
 

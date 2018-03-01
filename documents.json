@@ -1,47 +1,8 @@
 ---
 layout: null
 ---
-{% assign documents = 0 %}
-{ "docs" :[
-  {% for post in site.rutas %}
-    {% unless post.draft or post.layout == 'post' %}
-      {% if documents != 0 %}
-          ,
-      {% endif %}
-        {% assign authorInfo = site.data.authors[post.author] %}  
-          { "url" : "{{ post.url | relative_url }}",
-            "title": "{{ post.title | escape }}",
-            "excerpt":"{{post.excerpt}}",
-            "author": "{{ authorInfo.name }}",
-            "date": "{{post.date | date: '%b %d' }}",
-            "image": "{{post.images_url}}/thumbnail.jpg"
-          }
-        {% assign documents = documents | plus: 1 %}
-      {% endunless %}
-    {% endfor %}
-],
-"jekyll":{
-  "logo" : "{{ site.logo | escape }}",
-  "brandColor": "{{ site.brand_color }}",
-  "pages" : [
-    {"url":"/", "title" :"inicio"},
-    {% assign pages = 0 %}
-    {% assign default_paths = site.pages | map: "path" %}
-    {% assign page_paths = site.header_pages | default: default_paths %}
-    {% if page_paths %} 
-            {% for path in page_paths %}
-            {% assign my_page = site.pages | where: "path", path | first %}
-            {% if my_page.menu %}
-            {% if pages != 0 %}
-                ,
-            {% endif %}
-                {
-                    "url": "{{ my_page.url | relative_url }}",
-                    "title": "{{ my_page.title | escape }}"
-                }
-                {% assign pages = pages | plus: 1 %}
-            {% endif %}
-            {% endfor %}      
-    {% endif %}
-  ]
-}}
+{% for collection in site.collections %}
+  {% if site.main_content == collection.label %} 
+    {{ collection.docs  | jsonify  }}
+  {% endif %}
+{% endfor %}

@@ -1,7 +1,6 @@
 ---
 layout: null
 ---
-
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
@@ -13,7 +12,9 @@ layout: null
     <lastBuildDate>2014-12-11T04:44:16Z</lastBuildDate>
     <link>{{ site.url }}{{ site.baseurl }}/</link>
     <language>es-co</language>
-    {% for post in site.posts %}
+{% for collection in site.collections %}
+{% if site.main_content == collection.label %} 
+    {% for post in collection.docs  %}
         {%  unless post.draft %}
             <item>
                 <title>{{ post.title | xml_escape }}</title>
@@ -180,5 +181,7 @@ layout: null
             </item>
         {% endunless %}
     {% endfor %}
+    {% endif %}
+   {% endfor %}
   </channel>
 </rss>

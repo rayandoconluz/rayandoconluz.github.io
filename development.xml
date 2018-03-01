@@ -13,6 +13,8 @@ layout: null
     <lastBuildDate>2014-12-11T04:44:16Z</lastBuildDate>
     <link>{{ site.url }}{{ site.baseurl }}/</link>
     <language>es-co</language>
+{% for collection in site.collections %}
+{% if site.main_content == collection.label %} 
     {% for post in site.posts %}
         {% if post.draft %}
             <item>
@@ -178,5 +180,7 @@ layout: null
             </item>
         {% endif %}
     {% endfor %}
+{% endif %}
+{% endfor %}
   </channel>
 </rss>
