@@ -1,7 +1,7 @@
 ---
 layout: page
 menu: true
-title: Acerca de nosotros
+title: acerca
 permalink: /acerca/
 images_url: /images/acerca
 ---

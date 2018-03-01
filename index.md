@@ -1,6 +1,5 @@
 ---
 layout: home
-menu: true
 title: rayando con luz
 ---
 
