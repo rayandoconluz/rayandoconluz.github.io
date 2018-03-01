@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  Casa de los colibríes
+title:  Inicio fotografia
 categories: colombia 
-tags: quindío
-excerpt: El recorrido es en total de 12.39 kilometros, llegando a la casa de los colibríes y bajando por el mirador las palmas.
+tags: inicio
+excerpt: si quieres ser fotografo mejor mira esto
 images_url: /images/inicio
 author: gabo
 ---
