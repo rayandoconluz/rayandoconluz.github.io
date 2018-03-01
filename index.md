@@ -1,6 +1,6 @@
 ---
 layout: home
-title: rayando con luz
+title: Rayando con luZ
 ---
 
 rayando con luz consejos sobre fotografia
