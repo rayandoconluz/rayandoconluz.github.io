@@ -3,17 +3,17 @@ layout: default
 ---
 <div class="wrapper">
 <div class="home">
-  <div class="categories">
-    <ul>
-      <a href="#">
-        <li>
-          <span class="active" >Articulos</span>
-        </li>
-      </a>
-    </ul>
-  </div>
   <div class="page-heading">Rayando <br> con <br> Luz</div>
   <div class="heading-vector"></div>
+  <div class="categories">
+      <ul>
+        <a href="#">
+          <li>
+            <span class="active" >Articulos</span>
+          </li>
+        </a>
+      </ul>
+  </div>
   {{ content }}
   <div class="articles">
   {% for collection in site.collections %}
