@@ -13,7 +13,7 @@ layout: null
     <link>{{ site.url }}{{ site.baseurl }}/</link>
     <language>es-co</language>
 {% for collection in site.collections %}
-{% if site.main_content == collection.label %} 
+{% if site.main_collection == collection.label %} 
     {% for post in collection.docs  %}
         {%  unless post.draft %}
             <item>

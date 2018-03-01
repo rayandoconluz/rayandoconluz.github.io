@@ -15,7 +15,9 @@ layout: default
   <h1 class="page-heading">{{page.title}}</h1>
   {{ content }}
   <div class="articles">
-    {% for post in site.posts %}
+  {% for collection in site.collections %}
+  {% if site.main_collection == collection.label %} 
+    {% for post in collection.docs %}
       {% unless post.draft %}
         <a class="article-link" href="{{ post.url | relative_url }}">
           <div class="article" style="background-image:url({{post.images_url}}/thumbnail.jpg);">
@@ -30,6 +32,8 @@ layout: default
           </div>
         </a>     
       {% endunless %}
+    {% endfor %}
+    {% endif %}
     {% endfor %}
     </div>
 </div>

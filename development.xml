@@ -14,8 +14,8 @@ layout: null
     <link>{{ site.url }}{{ site.baseurl }}/</link>
     <language>es-co</language>
 {% for collection in site.collections %}
-{% if site.main_content == collection.label %} 
-    {% for post in site.posts %}
+{% if site.main_collection == collection.label %} 
+    {% for post in collection.docs %}
         {% if post.draft %}
             <item>
                 <title>{{ post.title | xml_escape }}</title>

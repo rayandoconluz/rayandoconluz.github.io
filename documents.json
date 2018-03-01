@@ -2,7 +2,7 @@
 layout: null
 ---
 {% for collection in site.collections %}
-  {% if site.main_content == collection.label %} 
+  {% if site.main_collection == collection.label %} 
     {{ collection.docs  | jsonify  }}
   {% endif %}
 {% endfor %}

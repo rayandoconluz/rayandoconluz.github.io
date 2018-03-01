@@ -4,7 +4,7 @@ logo: /images/logo.png
 pwa: rayando con luz
 short_name: rcl
 brand_color: white
-main_content: posts
+main_collection: posts
 icons: 
   - src: images/launcher-icon-1x.png
     size: 48x48
