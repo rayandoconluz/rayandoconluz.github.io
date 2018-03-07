@@ -1,8 +1,33 @@
 ---
 layout: null
 ---
-{% for collection in site.collections %}
-  {% if site.main_collection == collection.label %} 
-    {{ collection.docs  | jsonify  }}
-  {% endif %}
-{% endfor %}
+{ "docs" : {% for collection in site.collections %}
+              {% if site.main_collection == collection.label %} 
+                {{ collection.docs  | jsonify  }}
+              {% endif %}
+            {% endfor %},
+"jekyll":{
+  "logo" : "{{ site.logo | escape }}",
+  "brandColor": "{{ site.brand_color }}",
+  "pages" : [
+    {"url":"/", "title" :"inicio"},
+    {% assign pages = 0 %}
+    {% assign default_paths = site.pages | map: "path" %}
+    {% assign page_paths = site.header_pages | default: default_paths %}
+    {% if page_paths %} 
+            {% for path in page_paths %}
+            {% assign my_page = site.pages | where: "path", path | first %}
+            {% if my_page.menu %}
+            {% if pages != 0 %}
+                ,
+            {% endif %}
+                {
+                    "url": "{{ my_page.url | relative_url }}",
+                    "title": "{{ my_page.title | escape }}"
+                }
+                {% assign pages = pages | plus: 1 %}
+            {% endif %}
+            {% endfor %}      
+    {% endif %}
+  ]
+}}

@@ -85,12 +85,15 @@ layout: default
 </article>
 </div>
 
-<h2 class="related-title">Quizas tambien te Interesé alguna de estas rutas  🤔 </h2>
+<h2 class="related-title">Quizas tambien te Interesé alguna {{site.main_collection}}  🤔 </h2>
 <ul class="related-articles">
   {% assign maxRelated = 4 %}
   {% assign minCommonTags =  1 %}
   {% assign maxRelatedCounter = 0 %}
-  {% for relatedPost in site.posts %}
+  
+  {% for collection in site.collections %}
+  {% if site.main_collection == collection.label %} 
+  {% for relatedPost in collection.docs %}
     {% unless relatedPost.draft or relatedPost.layout == 'post' %}                                       
       {% assign sameTagCount = 0 %}
       {% assign commonTags = '' %}
@@ -124,6 +127,12 @@ layout: default
       {% endif %}
     {% endunless %}
   {% endfor %}
+  {% endif %}
+  {% endfor %}
 </ul>
+
+
+
+
 
 
