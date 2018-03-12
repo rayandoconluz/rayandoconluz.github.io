@@ -1,9 +1,17 @@
 ---
 layout: default
 ---
-<div class="trail_featured-image">
-        <h1 class="post-title">{{ page.title | escape }}</h1>
-        <div class="scrim-bottom"></div>
+<div class="post_featured-image">
+    <amp-img 
+    amp-fx="parallax"
+    data-parallax-factor="1.3"
+    width="1600"
+    height="900"
+    layout="responsive"
+    src="{{page.images_url}}/featured.jpg">
+  </amp-img>
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+    <div class="scrim-bottom"></div>
 </div>
 <div class="wrapper">
 <article class="post">
@@ -12,7 +20,7 @@ layout: default
           {% if page.author %}
           {% assign authorInfo = site.data.authors[page.author] %}  
           <div class="author_avatar">
-            <div>
+            <div class="author_radius">
               <amp-img class="author_avatar-img"
                     src="https://graph.facebook.com/{{ authorInfo.facebookId }}/picture?type=normal"
                     alt=""

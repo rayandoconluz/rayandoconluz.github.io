@@ -167,13 +167,12 @@
       text-align: center;
       font-family: "rissa";
       color:black;
-      line-height: 0.7;
+      line-height: normal;
       margin-top: 15px;
     }
     @media screen and (max-width: 600px) {
       .page-heading {
         font-size: 43px;
-        line-height: 0.6; 
       }
       .site-nav {
         position: absolute;
@@ -322,11 +321,14 @@
     .author_description {
       font-size: 12px;
     }
+    .author_radius {
+      border-radius: 100%;
+      overflow: hidden;
+    } 
     .author_avatar-img {
       width: 70px;
       height: 70px;
       vertical-align: middle;
-      border-radius: 100%;
     }
     .author_published-date {
       font-size: 10px;
@@ -429,21 +431,12 @@
       flex-basis: 50%;
       flex-grow: 1;
     }
-    .trail_featured-image{
-      position: relative;
-      width: 100%;
-      padding-bottom: 52.356%;
-      background-image: url("{{page.images_url}}/featured.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
     .post_featured-image{
       position: relative;
-      width: 100%;
-      padding-bottom: 52.356%;
-      background-image: url("{{page.featured}}");
-      background-repeat: no-repeat;
-      background-size: cover;
+      overflow: hidden;
+    }
+    .post_featured-image amp-img {
+      margin-bottom: -17%;
     }
     .menu-button{
       display: block;
