@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  Inicio fotografia
-categories: colombia 
+title:  te recomiendo que no seas fotografo
+categories: consejos 
 tags: inicio
-excerpt: si quieres ser fotografo mejor mira esto
-images_url: /images/inicio
+excerpt: si quieres ser fotografo? mejor mira esto
+images_url: /images/nofotografo
 author: gabo
 ---
 
