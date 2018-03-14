@@ -1,8 +1,17 @@
 ---
 layout: default
 ---
-<div class="trail_featured-image">
-        <h1 class="post-title">{{ page.title | escape }}</h1>
+<div class="post_featured-image">
+  <amp-img 
+  amp-fx="parallax"
+  data-parallax-factor="0.5"
+  width="1600"
+  height="900"
+  layout="responsive"
+  src="{{page.images_url}}/featured.jpg">
+</amp-img>
+  <h1 class="post-title">{{ page.title | escape }}</h1>
+  <div class="scrim-bottom"></div>
 </div>
 <div class="wrapper">
 <article class="post">
