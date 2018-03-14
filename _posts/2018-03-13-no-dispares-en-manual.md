@@ -1,0 +1,75 @@
+---
+layout: post
+title:  No dispares en modo manual!
+categories: consejos
+tags: inicio
+excerpt: si te has perdido algunas fotos fugaces solo por no tener el tiempo para configurar tu camara y hacer la toma es mejor que mires esto
+images_url: /images/nomanual
+author: gabo
+---
+
+Bueno quiero decir no lo hagas siempre 😅, el modo manual no es siempre el más óptimo para todas las ocasiones.
+Es muy común escuchar  que el modo manual es como "la evolución final de un fotógrafo" por tal razón algunas personas
+solo viven en modo "PRO".
+
+Como opinión personal digo que es necesario conocer bien cómo configurar la exposición de nuestra cámara pero los modos
+complementarios están allí por algo y nos puede facilitar la vida en algunas ocasiones como las que mostrare aqui.
+
+En ciertas ocasiones nuestra velocidad puede marcar la diferencia entre lograr un momento fugaz o  solo quedarnos con esa
+imagen en nuestra mente 😕. Esto es muy común en la fotografía callejera o fotografía de vida salvaje.
+
+El darme  cuenta de esto que les voy a decir me costó muchas fotografías quemadas o subexpuestas las cuales son
+representaciones pobres de momentos irrepetibles 😣.
+
+Bueno aqui esta... Como recomendación personal prefiero usar los modos (algo menospreciados) prioridad apertura AV y prioridad velocidad TV, en estos modos
+podemos elegir un valor al cual le daremos más importancia, los demás valores de exposición se calculará automáticamente.
+
+Otra ventaja de estos modos es el hecho de que podemos acceder rápidamente al valor que hayamos dado prioridad ( apertura o velocidad de obturación) usando la
+ruedita que casi todas las cámaras tienen en la parte superior 📷, de esta forma podremos reaccionar rápidamente si queremos algún ajuste improvisado y debido a que los demás valores son automáticos no tendremos muchas sorpresas en la exposición.
+
+<amp-fx-flying-carpet  height="900px">
+  <amp-img src="/images/nomanual/IMG_1916.jpg"
+   layout="responsive"
+    width="2395"
+    height="1597"
+    alt="an image"></amp-img>
+</amp-fx-flying-carpet>
+<amp-fx-flying-carpet  height="900px">
+  <amp-img src="/images/nomanual/IMG_1916-4.jpg"
+   layout="responsive"
+   width="2395"
+   height="1597"
+    alt="an image"></amp-img>
+</amp-fx-flying-carpet> 
+
+para finalizar supongamos que salimos a tomar fotografías a un mercado de frutas y tenemos en mente una fotografía de algo pequeño, no se una manzana por ejemplo así que decidimos dar prioridad a la apertura y así conseguir un bonito desenfoque al usar una amplia apertura de diafragma. Pero justo en ese instante va cruzando un nino y quieres esa toma. en ese momento sabemos que con solo un pequeño giro de la ruedita en nuestra cámara tendremos mayor profundidad de campo, y así tener todo el nino en foco, sólo resta disparar con confianza .
+
+esto mismo aplica para el modo prioridad velocidad de obturación.
+
+Espero que este humilde consejo pueda servirles y  por favor piensen muy bien qué tipo de fotografía van a hacer antes de dejar la cámara en el modo M  o modo “Pro”
+
+aqui dejo algunas fotografias de calle que logre capturar
+
+<amp-carousel
+    width="2395"
+    height="1597"
+    layout="responsive"
+    type="slides"
+    autoplay
+    delay="2000">
+    {% include image.html
+        file="nomanual/14082016-_MG_3136-3.jpg"
+        width="2395"
+        height="1597"
+    %}
+     {% include image.html
+        file="nomanual/14082016-_MG_3134-2.jpg"
+        width="2395"
+        height="1597"
+    %}
+      {% include image.html
+        file="nomanual/13082016-_MG_3051-1.jpg"
+        width="2395"
+        height="1597"
+    %}
+</amp-carousel>

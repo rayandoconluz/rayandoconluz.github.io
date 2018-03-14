@@ -3,11 +3,9 @@ layout: post
 title:  La base de un buen fotografo
 categories: consejos
 tags: inicio
-excerpt: Con estos simples conceptos podras iniciar tu camino en la fotografia 
+excerpt: Con estos simples conceptos podras iniciar tu camino en la fotografia
 images_url: /images/bases
 author: gabo
 ---
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `bundle exec jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+post en progreso .... cargando .... ⌛️ jejej no va a cargar, apenas lo estoy escribiendo
