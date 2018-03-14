@@ -42,7 +42,7 @@ ruedita que casi todas las cámaras tienen en la parte superior 📷, de esta fo
     alt="an image"></amp-img>
 </amp-fx-flying-carpet> 
 
-para finalizar supongamos que salimos a tomar fotografías a un mercado de frutas y tenemos en mente una fotografía de algo pequeño, no se una manzana por ejemplo así que decidimos dar prioridad a la apertura y así conseguir un bonito desenfoque al usar una amplia apertura de diafragma. Pero justo en ese instante va cruzando un nino y quieres esa toma. en ese momento sabemos que con solo un pequeño giro de la ruedita en nuestra cámara tendremos mayor profundidad de campo, y así tener todo el nino en foco, sólo resta disparar con confianza .
+para finalizar supongamos que salimos a tomar fotografías a un mercado de frutas y tenemos en mente una fotografía de algo pequeño, no se una manzana por ejemplo así que decidimos dar prioridad a la apertura y así conseguir un bonito desenfoque al usar una amplia apertura de diafragma. Pero justo en ese instante va cruzando un nino y quieres esa toma 😌. en ese momento sabemos que con solo un pequeño giro de la ruedita en nuestra cámara tendremos mayor profundidad de campo, y así tener todo el nino en foco, sólo resta disparar con confianza .
 
 esto mismo aplica para el modo prioridad velocidad de obturación.
 
