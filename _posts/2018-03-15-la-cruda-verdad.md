@@ -11,41 +11,41 @@ author: gabo
 
 apenas estoy escribiendo este
 
-<div style="display:flex;">
+<div class="gallery">
 {% include image.html
     file="cruda/1.jpg"
-    width="60"
-    height="90"
+    width="600"
+    height="900"
 %}
 {% include image.html
     file="cruda/2.jpg"
-    width="60"
-    height="90"
+    width="600"
+    height="900"
 %}
 {% include image.html
     file="cruda/3.jpg"
-    width="60"
-    height="90"
+    width="600"
+    height="900"
 %}
 {% include image.html
     file="cruda/4.jpg"
-    width="50"
-    height="33"
+    width="500"
+    height="330"
 %}
 {% include image.html
     file="cruda/5.jpg"
-    width="50"
-    height="33"
+    width="500"
+    height="330"
 %}
 {% include image.html
     file="cruda/6.jpg"
-    width="50"
-    height="33"
+    width="500"
+    height="330"
 %}
 {% include image.html
     file="cruda/7.jpg"
-    width="50"
-    height="33"
+    width="500"
+    height="330"
 %}
 </div>
 {% include image.html
