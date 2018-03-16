@@ -60,16 +60,19 @@ aqui dejo algunas fotografias de calle que logre capturar
     {% include image.html
         file="nomanual/14082016-_MG_3136-3.jpg"
         width="2395"
+        layout="responsive"
         height="1597"
     %}
      {% include image.html
         file="nomanual/14082016-_MG_3134-2.jpg"
         width="2395"
+        layout="responsive"
         height="1597"
     %}
       {% include image.html
         file="nomanual/13082016-_MG_3051-1.jpg"
         width="2395"
+        layout="responsive"
         height="1597"
     %}
 </amp-carousel>
