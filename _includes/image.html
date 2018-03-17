@@ -12,8 +12,8 @@
     {% else %}
         src="{{site.url}}/images/{{ include.file }}"
     {% endif %}
-
-        layout="{{ include.layout}}" 
+        layout="{{ include.layout | default: responsive }}" 
+        on = "{{ include.on }}"
         alt="{{ include.caption }}"
         width="{{ include.width | default: 1028 }}px"
         height="{{ include.height | default: 771 }}px"

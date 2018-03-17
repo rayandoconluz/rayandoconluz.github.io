@@ -139,7 +139,7 @@
       position: fixed;
       width: 100%;
       top: 0;
-      z-index: 20000;
+      z-index: 500;
     }
     /* when inside amp shadow don't display the header */
     .amp-shadow .site-header {
@@ -259,7 +259,7 @@
       color: white;
       bottom: 0;
       padding: 0px 5px 2px 10px;
-      z-index: 10000;
+      z-index: 500;
     }
     @media screen and (max-width: 800px) {
       .post-title {
@@ -550,7 +550,7 @@
       height: 40%;
       position: absolute;
       top:0;
-      z-index: 1000;
+      z-index: 400;
     }
     .scrim-bottom{
       background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.33));
@@ -558,7 +558,7 @@
       height: 40%;
       position: absolute;
       bottom: 0;
-      z-index: 1000;
+      z-index: 400;
     }
     .related-articles__author{
       color: white;
@@ -690,7 +690,7 @@ a:visited {
   top:0;
   left: 0;
   width:100%;
-  z-index: 100000;
+  z-index: 500;
 }
 .main{
   padding-top: 57px;
@@ -856,7 +856,7 @@ a:hover {
   top: 12%;
   left: 6%;
   right: 12%;
-  z-index:1000;
+  z-index:400;
   margin: 0;
   line-height:1;
 }
@@ -870,7 +870,7 @@ a:hover {
   position: absolute;
   bottom: 12%;
   left: 6%;
-  z-index:1000;
+  z-index:400;
   margin:0;
 }
 .in-transition {
@@ -945,5 +945,8 @@ a:hover {
   display:flex;
 }
 .gallery > figure {
-  flex:1
+  flex:1;
+}
+.gallery amp-img{
+  margin:0;
 }
