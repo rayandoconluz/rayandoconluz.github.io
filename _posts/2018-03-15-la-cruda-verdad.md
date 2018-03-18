@@ -25,7 +25,7 @@ Al momento en que estemos frente a una escena la cual creemos tiene potencial y 
 
 Así que no nos desanimemos, lo importante es perseverar y practicar dia a dia.
 
-muestro una escena que se trabajó por varias horas 📸
+muestro una escena que se trabajó por algun tiempo ⏳ 📸
 
 
 {% include gallery.html %}
