@@ -1,10 +1,11 @@
 ---
 layout: post
 title:  te recomiendo que no seas fotografo
-categories: consejos
+categories: 📸
 tags: inicio
 excerpt: si quieres ser fotografo? mejor mira esto
 images_url: /images/nofotografo
+permalink: /🤳🏻/
 author: gabo
 ---
 
