@@ -9,7 +9,7 @@ author: gabo
 ---
 
 <amp-instagram
-    data-shortcode="fBwFP"
+    data-shortcode="BkjSX5WgGcwffD6CwXtAd84IpE6RylksjYTzeQ0"
     data-captioned
     width="400"
     height="400"
