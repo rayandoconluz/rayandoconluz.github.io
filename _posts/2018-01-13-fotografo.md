@@ -8,5 +8,12 @@ images_url: /images/nofotografo
 author: gabo
 ---
 
+<amp-instagram
+    data-shortcode="fBwFP"
+    data-captioned
+    width="400"
+    height="400"
+    layout="responsive">
+</amp-instagram>
 
 🔜🔜🔜🔜🔜🔜💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩 
