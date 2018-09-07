@@ -18,3 +18,11 @@ prueba de instagram
     height="900"
     layout="responsive">
 </amp-instagram>
+
+prueba de amp youtube
+
+<amp-youtube
+    data-videoid="1anGUPtjsMs"
+    layout="responsive"
+    width="1600" height="900">
+</amp-youtube>
