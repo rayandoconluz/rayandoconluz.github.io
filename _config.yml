@@ -17,7 +17,7 @@ icons:
 description: Descubre hermosas y poco conocidas rutas de los Andes colombianos, evade mutitudes en el camino y observa las más bellas especies y paisajes en tus rutas de senderismo. Una experiencia única y maravillosa te espera!
 lang: es
 fb_app_id: 1880022215651426
-url: http://rayandoconluz.photo # the base hostname & protocol for your site, e.g. http://example.com
+url: https://rayandoconluz.photo # the base hostname & protocol for your site, e.g. http://example.com
 email: rutasdelosandes@gmail.com
 fbpage: https://www.facebook.com/rayandoconluz/
 googlemaps_key: AIzaSyAz1r9qDIaA7lGoMdW7VPpvic7JXZjCdls
