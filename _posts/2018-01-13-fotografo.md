@@ -10,4 +10,11 @@ author: gabo
 
 estoy escribiendo este post
 
-
+prueba de instagram
+<amp-instagram
+    data-shortcode="BcV3J5fHaVk"
+    data-captioned
+    width="1600"
+    height="900"
+    layout="responsive">
+</amp-instagram>
