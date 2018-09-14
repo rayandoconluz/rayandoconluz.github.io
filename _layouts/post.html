@@ -10,8 +10,14 @@ layout: default
       "description":"{{ page.excerpt | escape }}",
       "headline":"{{ page.title | escape }}",
       "image": "{{site.url}}{{page.images_url}}/featured.jpg",
-      "mainEntityOfPage":"{{ page.url | replace:'index.html','' | absolute_url }}",
-      "author": "juan gabriel ramirez",
+      "mainEntityOfPage":{
+        "@type": "WebPage",
+        "@id": "{{ page.url | replace:'index.html','' | absolute_url }}"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Juan Gabriel Ramirez"
+      },
       "publisher":{
         "@type":"Organization",
         "name":"Rayando con luz",
