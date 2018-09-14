@@ -5,14 +5,41 @@
       layout="nodisplay"
       side="right">
       <amp-img class="amp-close-image"
-        src="/images/ic_close_black_18dp_2x.png"
-        width="20"
-        height="20"
-        alt="close sidebar"
-        on="tap:sidebar.close"
-        role="button"
-        tabindex="0"></amp-img>
-      <ul>
+      src="/images/ic_close_black_18dp_2x.png"
+      width="20"
+      height="20"
+      alt="close sidebar"
+      on="tap:sidebar.close"
+      role="button"
+      tabindex="0"></amp-img>
+      <ul class="site_social">
+        <li>
+            <a target="_blank" href="https://twitter.com/rayandoconluz">
+              <amp-img width="30px" height="30px" src="/images/twitter-logo-button.png" />
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://api.whatsapp.com/send?phone=573113403572&text=Hola%20ruteros%20como%20estan%20estan">
+              <amp-img width="30px" height="30px" src="/images/whatsapp-logo.png" />
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.facebook.com/rayandoconluz">
+              <amp-img width="30px" height="30px" src="/images/facebook-logo-button.png" />
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.instagram.com/rayandoconluz/">
+              <amp-img width="30px" height="30px" src="/images/instagram-logo.png" />
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.youtube.com/channel/UC5DDXpfM-g6BHczTQzEILqg">
+              <amp-img width="30px" height="30px" src="/images/youtube-logo-button.png" />
+            </a>
+        </li>
+      </ul> 
+      <ul class="main-menu">
         <li>
           <a class="page-link" href="/">
             Inicio
@@ -29,30 +56,10 @@
           {% endif %}
         {% endfor %}
       </ul>
-      <ul class="site_social">
-        <li>
-            <a target="_blank" href="https://twitter.com/rayandoconluz">
-              <amp-img width="40px" height="40px" src="/images/twitter-logo-button.png" />
-            </a>
-        </li>
-        <li>
-            <a target="_blank" href="https://www.facebook.com/rayandoconluz">
-              <amp-img width="40px" height="40px" src="/images/facebook-logo-button.png" />
-            </a>
-        </li>
-        <li>
-            <a target="_blank" href="https://www.instagram.com/rayandoconluz/">
-              <amp-img width="40px" height="40px" src="/images/instagram-logo.png" />
-            </a>
-        </li>
-        <li>
-            <a target="_blank" href="https://www.youtube.com/channel/UC5DDXpfM-g6BHczTQzEILqg">
-              <amp-img width="40px" height="40px" src="/images/youtube-logo-button.png" />
-            </a>
-        </li>
-      </ul>
+   
     </amp-sidebar>
   {% endif %}
+
 <header class="site-header" role="banner">
   <div class="header-wrapper page-content">
     <a class="site-title" href="{{ "/" | relative_url }}">
