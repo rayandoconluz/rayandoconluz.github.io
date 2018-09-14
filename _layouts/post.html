@@ -6,7 +6,7 @@ layout: default
       "@context": "http://schema.org/",
       "@type": "Article",
       "dateModified":"{{  "now"  | date: "%Y-%m-%dT%H:%M:%S" }}",
-      "datePublished":"{{ post.date | date: "%Y-%m-%dT%H:%M:%S" }}",
+      "datePublished":"{{ page.date | date: "%Y-%m-%dT%H:%M:%S" }}",
       "description":"{{ page.excerpt | escape }}",
       "headline":"{{ page.title | escape }}",
       "image": "{{site.url}}{{page.images_url}}/featured.jpg",
