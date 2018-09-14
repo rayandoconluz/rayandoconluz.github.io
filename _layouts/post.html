@@ -1,6 +1,30 @@
 ---
 layout: default
 ---
+<script type="application/ld+json">
+  {
+      "@context": "http://schema.org/",
+      "@type": "Article",
+      "dateModified":"2018-03-05",
+      "datePublished":"2018-03-01",
+      "description":"{{ page.excerpt | escape }}",
+      "headline":"{{ page.title | escape }}",
+      "image": "{{site.url}}{{page.images_url}}/featured.jpg",
+      "mainEntityOfPage":"{{ page.url | replace:'index.html','' | absolute_url }}",
+      "author": "juan gabriel ramirez",
+      "publisher":{
+        "@type":"Organization",
+        "name":"Rutas de los andes",
+        "logo": {
+          "@type":"ImageObject",
+          "height":"60",
+          "url":"https://rutasdelosandes.com/images/wordmark.png",
+          "width":"344",
+          "name":"rutas de los andes"
+        }
+      }
+  }
+</script>
 <div class="post_featured-image">
     <amp-img 
     amp-fx="parallax"
